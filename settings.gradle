@@ -1,0 +1,2 @@
+rootProject.name='Alike'
+include ':app'

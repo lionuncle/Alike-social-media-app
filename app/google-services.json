@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "777228201576",
+    "firebase_url": "https://alike-social.firebaseio.com",
+    "project_id": "alike-social",
+    "storage_bucket": "alike-social.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777228201576:android:f327035ced6a100f6115dd",
+        "android_client_info": {
+          "package_name": "com.fyp.alike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777228201576-4dthnmsc2uvcj9gpl1mo5k7brmk2slpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcRffN6y-659rahnHpm0pRy2dqkYYxpAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777228201576-4dthnmsc2uvcj9gpl1mo5k7brmk2slpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
