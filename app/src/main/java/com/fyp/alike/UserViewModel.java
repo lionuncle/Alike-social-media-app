@@ -58,5 +58,16 @@ public class UserViewModel {
             }
         });
     }
+    public void updateUser(final String email, final String photoName){
+        db.collection("Users").document(email).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                User u = documentSnapshot.toObject(User.class);
+                assert u != null;
+                u.setPhotoName(photoName);
+                db.collection("Users").document(email).set(u);
+            }
+        });
+    }
 
 }
