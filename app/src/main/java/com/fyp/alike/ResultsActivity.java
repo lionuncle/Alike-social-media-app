@@ -35,6 +35,11 @@ public class ResultsActivity extends AppCompatActivity {
                     int result = r.nextInt(high-low) + low;
                     u.setTempPercent(result);
                 }
+                for (User user : myList){
+                    if (user.getEmail().equals(MainActivity.email)){
+                        myList.remove(user);
+                    }
+                }
                 Collections.sort(myList, new Comparator<User>() {
                     @Override
                     public int compare(User o1, User o2) {

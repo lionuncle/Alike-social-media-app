@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
                     //image uploaded
 
                     new UserViewModel().updateUser(email,imgId);
-                    Toast.makeText(MainActivity.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
                     
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (isSampleImageSelected){
             new UserViewModel().updateUser(email,sampleImgName);
-            Toast.makeText(this, "Image added", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Image added", Toast.LENGTH_SHORT).show();
         }
 
         startActivity(new Intent(MainActivity.this,ResultsActivity.class));

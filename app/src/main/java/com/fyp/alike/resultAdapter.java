@@ -33,6 +33,7 @@ import java.util.LinkedList;
 public class resultAdapter extends RecyclerView.Adapter<resultAdapter.CourseViewHolder> {
 
     private static LinkedList<User> showList;
+    public static Bitmap otherPersonImage;
     resultAdapter(LinkedList<User> showList){
         resultAdapter.showList = showList;
     }
@@ -61,6 +62,7 @@ public class resultAdapter extends RecyclerView.Adapter<resultAdapter.CourseView
                     Bitmap my_img = BitmapFactory.decodeFile(localFile.getAbsolutePath());
                     if (my_img != null) {
                         holder.imageView.setImageBitmap(my_img);
+                        otherPersonImage = my_img;
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -91,10 +93,10 @@ public class resultAdapter extends RecyclerView.Adapter<resultAdapter.CourseView
             storage = FirebaseStorage.getInstance();
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {/*
-                    Intent i = new Intent(itemView.getContext(), CourseDetailActivity.class);
-                    i.putExtra("ClickedId",showList.get(getAdapterPosition()).getId());
-                    itemView.getContext().startActivity(i);*/
+                public void onClick(View v) {
+                    Intent i = new Intent(itemView.getContext(), ChatActivity.class);
+                    i.putExtra("otherPersonEmail",showList.get(getAdapterPosition()).getEmail());
+                    itemView.getContext().startActivity(i);
                 }
             });
 
