@@ -2,6 +2,7 @@ package com.fyp.alike;
 
 public class User {
     private String name,email,photoName;
+    private int tempPercent;
 
     public String getName() {
         return name;
@@ -9,6 +10,14 @@ public class User {
 
     public String getPhotoName() {
         return photoName;
+    }
+
+    public int getTempPercent() {
+        return tempPercent;
+    }
+
+    public void setTempPercent(int tempPercent) {
+        this.tempPercent = tempPercent;
     }
 
     public void setPhotoName(String photoName) {

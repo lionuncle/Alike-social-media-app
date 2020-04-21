@@ -30,15 +30,17 @@
 
         <TextView
             android:id="@+id/UserDisplayName"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:layout_constraintWidth_default="wrap"
+            android:layout_marginStart="16dp"
             android:text="Username"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/profileImg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintEnd_toStartOf="@+id/logutBtn"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/profileImg"
             app:layout_constraintTop_toTopOf="@+id/profileImg"
             app:layout_constraintVertical_bias="0.242" />
@@ -52,8 +54,6 @@
             android:src="@drawable/ic_power"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/UserDisplayName"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="------------OR------------"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -137,7 +137,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="PICK A SAMPLE IMAGE"
-            android:textColor="@color/lightGrey"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

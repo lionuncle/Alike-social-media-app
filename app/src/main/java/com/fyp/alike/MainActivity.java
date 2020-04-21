@@ -250,5 +250,7 @@ public class MainActivity extends AppCompatActivity {
             new UserViewModel().updateUser(email,sampleImgName);
             Toast.makeText(this, "Image added", Toast.LENGTH_SHORT).show();
         }
+
+        startActivity(new Intent(MainActivity.this,ResultsActivity.class));
     }
 }
