@@ -24,7 +24,7 @@ public class ChatViewModel {
 
     public void readAllChatOf(final String sender, final String receiver, final FirestoreResults results){
 
-        db.collection("Chats")
+        db.collection("Chats").orderBy("timeStamp")
                 .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -32,12 +32,16 @@ public class ChatViewModel {
                 for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots){
                     Chat c = (documentSnapshot.toObject(Chat.class));
                     if (c== null) return;
-                    if ( (c.getSender().equals(sender) && c.getReceiver().equals(receiver)) ||
-                            (c.getReceiver().equals(sender) && c.getSender().equals(receiver)) ){
+                    chatList.add(c);
+                    /*if ( (c.getSender().equals(sender) && c.getReceiver().equals(receiver))
+                             ){
                         chatList.add(c);
                     }
+                    if ((c.getReceiver().equals(sender) && c.getSender().equals(receiver))){
+                        chatList.add(c);
+                    }*/
                 }
-                Collections.reverse(chatList);
+                //Collections.reverse(chatList);
                 results.onResult();
             }
         }).addOnFailureListener(new OnFailureListener() {

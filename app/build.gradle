@@ -41,4 +41,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     // FirebaseUI Storage only
     implementation 'com.firebaseui:firebase-ui-storage:6.2.0'
+    implementation 'com.firebase:firebase-client-android:2.5.2'
 }
