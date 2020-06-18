@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "777228201576-08fa7j5gj4pq1tdlsni6j0ahg10qsfa6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fyp.alike",
+            "certificate_hash": "1d4c35057290e85c8826903de0e68609affbe5e0"
+          }
+        },
+        {
           "client_id": "777228201576-4dthnmsc2uvcj9gpl1mo5k7brmk2slpn.apps.googleusercontent.com",
           "client_type": 3
         }

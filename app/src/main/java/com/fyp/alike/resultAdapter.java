@@ -55,7 +55,7 @@ public class resultAdapter extends RecyclerView.Adapter<resultAdapter.CourseView
         StorageReference ref = holder.storage.getReferenceFromUrl("gs://"+ opts.getStorageBucket());
         try {
             final File localFile = File.createTempFile("Images", "bmp");
-            ref.child("images/"+showList.get(position).getPhotoName()+".jpg")
+            ref.child("images/"+showList.get(position).getPhotoName())
                     .getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
@@ -68,7 +68,7 @@ public class resultAdapter extends RecyclerView.Adapter<resultAdapter.CourseView
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(holder.itemView.getContext(), "error: "+ e.toString(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(holder.itemView.getContext(), "some images might be hidden", Toast.LENGTH_SHORT).show();
                 }
             });
         } catch (IOException e) {
